@@ -1,5 +1,5 @@
 html, body {
-	background: #663399; /* Beccapurple */
+	background: #e05a5a; /* red */
 	margin: 0;
 }
 h1, h2, h3, h4, h5, h6, p {
@@ -7,10 +7,10 @@ h1, h2, h3, h4, h5, h6, p {
 	padding: 0;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: rgb(107, 107, 132);
+	color: rgb(8, 136, 68);
 }
 body {
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: 'Times New Roman', Times, serif, Geneva, sans-serif;
 	font-size: 100%;
 	width: 80%;
 	margin-right: auto;
@@ -20,12 +20,13 @@ body {
 	line-height: 1.8;
 }
 h1 {
-	font: 1.6em Verdana, Geneva, sans-serif;
+	font: 3.2em 'Times New Roman', Geneva, sans-serif;
 	margin-bottom: .4em;
-	color: rgb(83, 104, 138);
+	color: rgb(233, 64, 7);
 }
 h2 {
-	font: 3.2em Georgia, "Times New Roman", Times, serif;
+	font: 1.6em 'Times New Roman'
+, "Times New Roman", Times, serif;
 	margin-bottom: .2em;
 }
 h3 {
@@ -82,7 +83,7 @@ td, th {
 	text-align: center;
 }
 header h2 {
-	padding-bottom: .2em;
+	padding-bottom: 1.5em;
 	border-bottom: 1px solid gray;
 }
 aside {
@@ -90,6 +91,14 @@ aside {
 	background:rgb(83, 104, 138);
 	color: white;
 	margin-bottom: 1em;
+	width: 30%;
+	float: right;
+}
+aside.did-you-know {
+    float: right;
+    clear: right;      /* This is the magic line: it forces the aside BELOW other right-floated items */
+    width: 300px;
+    margin-top: 20px;
 }
 aside h4 {
 	color: white;
