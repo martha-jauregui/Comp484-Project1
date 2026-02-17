@@ -1,6 +1,7 @@
 html, body {
-	background: #e05a5a; /* red */
+	background: #000000; /* black */
 	margin: 0;
+	padding: 0;
 }
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
@@ -16,11 +17,12 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	padding: 2.5% 2.5% 0;
-	background: white;
+	background: rgb(0, 0, 0);
 	line-height: 1.8;
+	color: rgb(255,255,255)
 }
 h1 {
-	font: 3.2em 'Times New Roman', Geneva, sans-serif;
+	font: 3.2em 'Times New Roman', Geneva, sxans-serif;
 	margin-bottom: .4em;
 	color: rgb(233, 64, 7);
 }
@@ -66,6 +68,8 @@ dt {
 }
 dd {
 	margin-bottom: 1.4em;
+	margin-left: 0;
+	padding: 10px 0;
 }
 table {
 	margin-top: 1em;
@@ -96,7 +100,7 @@ aside {
 }
 aside.did-you-know {
     float: right;
-    clear: right;      /* This is the magic line: it forces the aside BELOW other right-floated items */
+    clear: right;      
     width: 300px;
     margin-top: 20px;
 }
@@ -110,9 +114,6 @@ footer {
 	line-height: 4em;
 	margin-top: 1em;
 }
-blockquote {
-	font-style: italic;
-}
 .flowRight {
 	float: right;
 	margin-left: 10px;
@@ -120,4 +121,147 @@ blockquote {
 .flowLeft {
 	float: left;
 	margin-right: 10px;
+}
+nav ul {
+    list-style-type: none; /* takes the bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;        
+    justify-content: center; 
+}
+
+nav li {
+    margin: 0 15px; /* Adds equal spacing to the left and right */
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2e7d32; 
+    font-size: 1.1em;
+}
+.hero-container {
+    width: 100%;
+    height: 100vh; /*  height - 100 makes it exactly one screen tall */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* stops the photo from stretching weirdly */
+    display: block;
+}
+
+header {
+    padding-top: 50px;
+    text-align: center;
+}
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Allows images to drop to the next line */
+    justify-content: center; 
+    gap: 10px;             /* Space between the photos */
+    margin: 20px 0;
+}
+
+.photo-grid img {
+    width: calc(50% - 10px); 
+    height: 250px;         /* Force them to the same height */
+    object-fit: cover;     /* Prevents stretching */
+    
+    border: 1px solid #ffffff; 
+    box-sizing: border-box; /* border doesn't add to the width */
+}
+.info-split {
+    display: flex;
+    align-items: flex-start; /* Keeps text at the top */
+    justify-content: space-between;
+    gap: 40px; /* Space between text and photos */
+    margin: 40px 0;
+}
+
+.text-content {
+    flex: 1;  /* Takes up space on the left */
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px; /* Fixes the width so it stays a square grid */
+    gap: 15px;
+}
+
+.photo-grid img {
+    width: calc(50% - 8px);  /* 2x2 sizing */
+    height: 250px;           /* Adjust height as needed */
+    object-fit: cover;
+    border: 1px solid white; /* thin border */
+}
+html {
+    scroll-behavior: smooth; /* The magic line for easy navigation */
+    /* Adjust '100px' to match the height of your navigation/header */
+    scroll-padding-top: 100px; 
+}
+
+section:target {
+    background-color: rgba(232, 236, 124, 0.1); /* highlighted */
+    border-left: 5px solid #e9e511;           /* yellow bar on the left */
+    transition: background-color 0.5s ease;
+}
+.wardrobe-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Allows items to move to the next line */
+    justify-content: center; 
+    gap: 30px;             /* Space between items */
+    margin: 40px 0;
+}
+
+.wardrobe-item {
+    width: 300px;          /* Sets a fixed size for each item box */
+    text-align: center;    /* Centers the text under the photo */
+}
+
+.wardrobe-item img {
+    width: 100%;           /* Makes image fill the 300px box */
+    height: 400px;         /* Forces all images to the same height */
+    object-fit: cover;     /* Prevents images from looking squished */
+    border: 1px solid white;
+    transition: transform 0.3s ease; /* zoom effect! */
+}
+
+.wardrobe-item img:hover {
+    transform: scale(1.05);
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #e94007; /* orange title color */
+    padding-left: 20px;
+    margin: 30px 0;
+    color: #000;
+	background:rgb(228, 187, 209);
+}
+ruby {
+    font-weight: bold;
+    color: #e94007; /* orange-red highlight color */
+}
+
+rt {
+    font-size: 0.6em;
+    color: #ffffff; /* Makes the pronunciation easy to read */
+}
+select {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+    border: 1px solid #2e7d32; /* Green border  */
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+option {
+    background-color: #1a1a1a;
+    color: white;
 }
